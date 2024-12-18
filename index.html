@@ -119,10 +119,11 @@
         background-color: #7a1b72;
       }
 
-      a.btn:focus {
+      a.btn:focus, 
+      a.btn-urgent:focus {
         outline-style: solid;
         outline-color: transparent;
-        box-shadow: 0 0 0 4px #fae6fa;
+        box-shadow: 0 0 0 4px #511BBB;
       }
 
       a.btn-urgent {
@@ -143,6 +144,9 @@
       }
 
       ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
         padding: 0;
         margin: 0;
         line-height: 1.5;
@@ -150,11 +154,10 @@
 
       ul li {
         list-style: none;
-        margin-bottom: 1rem;
       }
 
       hgroup {
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
       }
 
       hgroup > * {
@@ -190,7 +193,7 @@
           <a
             class="btn-urgent"
             href="https://www.cats.org.uk/adopt-a-cat/find-a-cat?id=37956&isBranchCat=1"
-            >Meet Oliver: looking for a new home</a
+            >Adopt Oliver</a
           >
         </li>
         <li>
