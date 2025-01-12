@@ -46,7 +46,7 @@
         list-style: none;
       }
       
-      a {
+      .cp-list a {
         text-decoration: none;
 
         display: inline-flex;
@@ -76,6 +76,9 @@
           background-color: hsl(305, 64%, 90%);
           color: #1E0028;
         }
+      }
+      .cp-home {
+        color: #000;
       }
       .cp-clr-1 {
         background-color: hsl(305, 64%, 29%); 
@@ -118,9 +121,9 @@
     <main class="container">
       <hgroup>
         <h1>Cats Protection</h1>
-        <p><a href="https://www.cats.org.uk/northumbria">cats.org.uk/northumbria</a></p>
+        <p><a class=”cp-home” href="https://www.cats.org.uk/northumbria">cats.org.uk/northumbria</a></p>
       </hgroup>
-      <ul>
+      <ul class=”cp-list”>
         <!-- 
           <li>
             <a class="cp-clr-1" href="">Adopt CAT NAME today!</a>
