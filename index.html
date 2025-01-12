@@ -26,7 +26,7 @@
         font-weight: 400;
       }
       hgroup {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
       }
       hgroup > * {
         margin-top: 0;
@@ -35,7 +35,7 @@
       hgroup > :not(:first-child):last-child {
         font-weight: 400;
         font-size: 1rem;
-      } 
+      }
       ul {
         display: flex;
         flex-wrap: wrap;
@@ -45,16 +45,31 @@
       ul li {
         list-style: none;
       }
-      
-      .cp-list:a {
+
+      a {
+        text-decoration: none;
+        color: #7a1b72;
+        transition: 220ms all ease-in-out;
+
+        &:hover {
+          color: #de0ced;
+        }
+
+        &:focus {
+          outline-style: solid;
+          outline-color: transparent;
+          color: #1e0028;
+        }
+      }
+
+      .cp-btn {
         text-decoration: none;
 
         display: inline-flex;
         align-items: center;
         justify-content: center;
 
-        background-color: #dee2e6;
-        color: #7a1b72;
+        color: #fff;
         border-radius: 5px;
 
         padding: 0.25em 0.75em;
@@ -67,53 +82,35 @@
 
         &:hover {
           background-color: hsl(305, 64%, 90%);
-          color: #1E0028;
+          color: #1e0028;
         }
 
         &:focus {
           outline-style: solid;
           outline-color: transparent;
           background-color: hsl(305, 64%, 90%);
-          color: #1E0028;
+          color: #1e0028;
         }
       }
-      .cp-home {
-        color: #000;
-      }
+
       .cp-clr-1 {
-        background-color: hsl(305, 64%, 29%); 
-        color: #fff;
+        background-color: hsl(305, 64%, 29%);
       }
       .cp-clr-2 {
-        background-color: hsl(255, 100%, 21%); 
-        color: #fff;
+        background-color: hsl(255, 100%, 21%);
       }
       .cp-clr-3 {
-        background-color: hsl(305, 64%, 39%); 
-        color: #fff;
+        background-color: hsl(260, 75%, 42%);
       }
       .cp-clr-4 {
-        background-color: hsl(309, 67%, 47%); 
-        color: #fff;
+        background-color: hsl(263, 78%, 57%);
       }
       .cp-clr-5 {
-        background-color: hsl(296, 90%, 60%); 
-        color: #fff;
+        background-color: hsl(296, 90%, 49%);
       }
       .cp-clr-6 {
-        background-color: hsl(296, 90%, 70%); 
-        color: #fff;
+        background-color: hsl(305, 64%, 39%);
       }
-      .cp-clr-7 {
-        background-color: hsl(260, 75%, 42%); 
-        color: #fff;
-      }
-      .cp-clr-8 {
-        background-color: hsl(263, 78%, 57%); 
-        color: #fff;
-      }
-
-      
     </style>
     <title>Cats Protection Northumbria - Links</title>
   </head>
@@ -121,34 +118,63 @@
     <main class="container">
       <hgroup>
         <h1>Cats Protection</h1>
-        <p><a class=”cp-home” href="https://www.cats.org.uk/northumbria">cats.org.uk/northumbria</a></p>
+        <p>
+          <a class="cp-home-link" href="https://www.cats.org.uk/northumbria"
+            >cats.org.uk/northumbria</a
+          >
+        </p>
       </hgroup>
-      <ul class=”cp-list”>
+
+      <ul>
         <!-- 
-          <li>
-            <a class="cp-clr-1" href="">Adopt CAT NAME today!</a>
-          </li> 
+          <li><a class="cp-btn cp-clr-1" href="">Adopt CAT NAME today!</a></li> 
         -->
         <li>
-          <a class="cp-clr-2" href="https://www.cats.org.uk/northumbria#support-ways-to-give">Wish List</a>
+          <a
+            class="cp-btn cp-clr-3"
+            href="https://www.cats.org.uk/bigwinterroam"
+            >Big Winter Roam</a
+          >
         </li>
         <li>
-          <a class="cp-clr-3" href="https://www.cats.org.uk/bigwinterroam">Big Winter Roam</a>
+          <a
+            class="cp-btn cp-clr-4"
+            href="https://www.justgiving.com/page/northumbria-catsprotection-winter-appeal-2024"
+            >Winter Appeal</a
+          >
         </li>
         <li>
-          <a class="cp-clr-4" href="https://www.justgiving.com/page/northumbria-catsprotection-winter-appeal-2024">Winter Appeal</a>
+          <a
+            class="cp-btn cp-clr-2"
+            href="https://www.cats.org.uk/northumbria#support-ways-to-give"
+            >Wish List</a
+          >
         </li>
         <li>
-          <a class="cp-clr-5" href="https://www.cats.org.uk/donate?b=115">Donate</a>
+          <a class="cp-btn cp-clr-5" href="https://www.cats.org.uk/donate?b=115"
+            >Donate</a
+          >
         </li>
         <li>
-          <a class="cp-clr-6" href="https://www.cats.org.uk/northumbria#AdoptACat">Adopt</a>
+          <a
+            class="cp-btn cp-clr-6"
+            href="https://www.cats.org.uk/northumbria#AdoptACat"
+            >Adopt</a
+          >
         </li>
         <li>
-          <a class="cp-clr-7" href="https://www.cats.org.uk/support-us/volunteeropportunities?id=11652">Foster</a>
+          <a
+            class="cp-btn cp-clr-6"
+            href="https://www.cats.org.uk/support-us/volunteeropportunities?id=11652"
+            >Foster</a
+          >
         </li>
         <li>
-          <a class="cp-clr-8" href="https://www.cats.org.uk/northumbria#vacancies">Volunteer</a>
+          <a
+            class="cp-btn cp-clr-6"
+            href="https://www.cats.org.uk/northumbria#vacancies"
+            >Volunteer</a
+          >
         </li>
       </ul>
     </main>
