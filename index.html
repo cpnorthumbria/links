@@ -358,6 +358,72 @@
       .btn-featured {
         animation: pulse 3s infinite;
       }
+      /* Custom Tooltip Styles */
+.btn-tooltip {
+  position: relative;
+}
+
+.btn-tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--gray-darker);
+  color: var(--white);
+  font-size: 0.875rem;
+  line-height: 1.3;
+  text-align: center;
+  border-radius: var(--border-radius-sm);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 1000;
+  box-shadow: var(--shadow-md);
+  pointer-events: none;
+  font-weight: 400;
+}
+
+.btn-tooltip::before {
+  content: '';
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: var(--gray-darker);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 1001;
+  pointer-events: none;
+}
+
+.btn-tooltip:hover::after,
+.btn-tooltip:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Responsive tooltip positioning */
+@media (max-width: 576px) {
+  .btn-tooltip::after {
+    width: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .btn-tooltip::after {
+    font-size: 0.8rem;
+  }
+}
+
+/* For featured button tooltip positioning */
+.btn-featured.btn-tooltip::after {
+  width: 300px;
+}
     </style>
 </head>
 
@@ -377,6 +443,7 @@
         <a href="https://www.cats.org.uk/northumbria#vacancies" class="btn btn-dark btn-lg">Volunteer</a>
         <a href="https://www.easyfundraising.org.uk/causes/cp-northumbria/" class="btn btn-dark btn-lg">Easyfundraising</a>
         <a href="https://www.recycle4charity.co.uk/Register/C137294" class="btn btn-dark btn-lg">Recycle4Charity</a>
+        <a href="https://www.giveacar.co.uk/" class="btn btn-dark btn-lg btn-tooltip" data-tooltip="Choose Cats Protection when prompted, and note Cats Protection Northumbria so your donation comes to our branch.">Give a Car</a>
         <a href="https://www.facebook.com/catsprotectionnorthumbria" class="btn btn-dark btn-lg">Facebook</a>
         <a href="https://www.instagram.com/catsprotectionnorthumbria/" class="btn btn-dark btn-lg">Instagram</a>
         <a href="https://www.youtube.com/@CatsProtectionNorthumbria" class="btn btn-dark btn-lg">Youtube</a>
